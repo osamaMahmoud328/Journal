@@ -1,0 +1,9 @@
+C:\Users\Eslam\Desktop\Journal3\JournalAccess\bin\Debug\JournalAccess.dll.config
+C:\Users\Eslam\Desktop\Journal3\JournalAccess\bin\Debug\JournalAccess.dll
+C:\Users\Eslam\Desktop\Journal3\JournalAccess\bin\Debug\JournalAccess.pdb
+C:\Users\Eslam\Desktop\Journal3\JournalAccess\bin\Debug\EntityFramework.dll
+C:\Users\Eslam\Desktop\Journal3\JournalAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Eslam\Desktop\Journal3\JournalAccess\bin\Debug\EntityFramework.xml
+C:\Users\Eslam\Desktop\Journal3\JournalAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Eslam\Desktop\Journal3\JournalAccess\obj\Debug\JournalAccess.dll
+C:\Users\Eslam\Desktop\Journal3\JournalAccess\obj\Debug\JournalAccess.pdb

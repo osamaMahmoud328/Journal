@@ -1,0 +1,24 @@
+﻿<Window x:Class="GUI.UserProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="UserProfile" Height="300" Width="600">
+    <Grid>
+        <Image Source="E:\Journal\article.jpg"  Stretch="UniformToFill"/>
+        <Image x:Name="search_control" HorizontalAlignment="Left" Height="193" Margin="318,33,0,0" VerticalAlignment="Top" Width="237"/>
+        <Label Content="FirstName :" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="73"/>
+        <Label Content="LastName&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top"/>
+        <Label Content="Company" HorizontalAlignment="Left" Margin="12,203,0,0" VerticalAlignment="Top"/>
+        <Label Content="Role" HorizontalAlignment="Left" Margin="12,234,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.89,0.587"/>
+        <TextBox x:Name="first_txt" HorizontalAlignment="Left" Height="23" Margin="88,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="last_txt" HorizontalAlignment="Left" Height="23" Margin="88,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="username_txt" HorizontalAlignment="Left" Height="23" Margin="88,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="company_txt" HorizontalAlignment="Left" Height="23" Margin="88,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="role_txt" HorizontalAlignment="Left" Height="23" Margin="88,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+
+    </Grid>
+</Window>

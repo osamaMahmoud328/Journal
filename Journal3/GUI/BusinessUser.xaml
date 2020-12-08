@@ -1,0 +1,34 @@
+﻿<Window x:Class="GUI.BusinessUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="BusinessUser" Height="418.614" Width="823.658" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,-8,-31">
+        <Image Source="E:\Journal\article.jpg"  Stretch="UniformToFill" Margin="0,-20,0,20"/>
+        <Button x:Name="button1" Content="Update Article" HorizontalAlignment="Left" Margin="21,149,0,0" VerticalAlignment="Top" Width="250" Height="40" Click="update_btn" FontWeight="Bold"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="302,90,0,0" VerticalAlignment="Top" Height="274" Width="488" FontWeight="Bold" FontSize="13.333" Background="#FF9E9C9C" HorizontalGridLinesBrush="#FF510E0E" VerticalGridLinesBrush="#FF630000"/>
+        <Button x:Name="button2" Content="Retrieve Articles" HorizontalAlignment="Left" Margin="24,208,0,0" VerticalAlignment="Top" Width="250" Height="37" FontWeight="Bold" Click="retrieve_btn"/>
+        <Button x:Name="button" Content="Add Article" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="24,90,0,0" Height="38" FontWeight="Bold" Click="Add_article_btn"/>
+        <Button x:Name="button3" Content="Delete Article" HorizontalAlignment="Left" Margin="24,263,0,0" VerticalAlignment="Top" Width="250" Height="38" FontWeight="Bold" Click="delete_btn"/>
+        <Button x:Name="button4" Content="Add Author" HorizontalAlignment="Left" Height="37" Margin="24,319,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" Click="add_author_btn"/>
+        <Button x:Name="button5" Content="View Profile" HorizontalAlignment="Left" Margin="101,319,0,0" VerticalAlignment="Top" Width="89" Height="37" FontWeight="Bold" Click="view_profile_btn"/>
+        <Label x:Name="header" Content="" HorizontalAlignment="Left" Margin="24,17,0,0" VerticalAlignment="Top" Width="209" Height="54" FontWeight="Bold" FontSize="22" Foreground="#FF2C2C2C" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.088"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.498"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="username" HorizontalAlignment="Left" Margin="241,17,0,0" VerticalAlignment="Top" Width="271" Height="55" Content="       " FontWeight="Bold" Background="{x:Null}" Foreground="#FF2C2C2C" RenderTransformOrigin="0.525,-0.292" FontSize="22"/>
+        <Button  Content="Log out " HorizontalAlignment="Left" Margin="574,17,0,0" VerticalAlignment="Top" Width="89" Height="55" FontWeight="Bold" FontSize="14" Click="Button_Click" />
+        <Button x:Name="button6" Content="Authors" HorizontalAlignment="Left" Margin="195,319,0,0" VerticalAlignment="Top" Width="79" Height="37" FontWeight="Bold" Click="button6_Click"/>
+        <Image x:Name="image_control" HorizontalAlignment="Left" Height="79" Margin="680,5,0,0" VerticalAlignment="Top" Width="112"/>
+
+    </Grid>
+</Window>

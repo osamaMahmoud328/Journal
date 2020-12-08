@@ -1,0 +1,142 @@
+﻿<Window x:Class="GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="678.5" Width="1239" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+
+    <Grid Margin="0,0,-8,0">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition x:Name="Admin" Width="Auto"/>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="738*"/>
+            <ColumnDefinition Width="353*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="E:\Journal\article.jpg"  Stretch="UniformToFill" Grid.ColumnSpan="6" Margin="-14,-17,-15,-13" Height="677" VerticalAlignment="Bottom" OpacityMask="Black"/>
+        <Button Content="Show All users&#xA;" HorizontalAlignment="Left" Margin="640,87,0,0" VerticalAlignment="Top" Width="304" Height="30" Grid.Column="4" Click="showusers_btn" FontSize="14.667" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.031"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="FirstName" HorizontalAlignment="Left" Margin="10,277,0,0" VerticalAlignment="Top" Height="26" Width="111" RenderTransformOrigin="0.516,2.692" FontWeight="Bold" FontSize="14.667" Grid.Column="4" OpacityMask="Black"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,156,0,0" VerticalAlignment="Top" Height="26" Width="10" Grid.Column="2"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.06,0.465" Height="26" Width="114" FontWeight="Bold" FontSize="14.667" Grid.Column="4" OpacityMask="Black"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="10,354,0,0" VerticalAlignment="Top" Height="26" Width="104" RenderTransformOrigin="0.333,0.462" FontWeight="Bold" FontSize="14.667" Grid.Column="4" OpacityMask="Black"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="8,402,0,0" VerticalAlignment="Top" Height="26" Width="66" RenderTransformOrigin="0.021,0.464" FontWeight="Bold" FontSize="14.667" Grid.Column="4" OpacityMask="#FF080808"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="10,440,0,0" VerticalAlignment="Top" Height="26" Width="87" RenderTransformOrigin="0.26,0.654" FontWeight="Bold" FontSize="14.667" Grid.Column="4" OpacityMask="#FF080808"/>
+        <TextBox x:Name="firstname_txt" HorizontalAlignment="Left" Height="23" Margin="166,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="4" BorderBrush="#FFB2B2B2" Background="#FFE4E4E4" FontWeight="Bold" FontSize="13.333"/>
+        <TextBox x:Name="lastname_txt" HorizontalAlignment="Left" Height="23" Margin="166,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="4" BorderBrush="#FFB2B2B2" Background="#FFE4E4E4" FontWeight="Bold" FontSize="13.333"/>
+        <TextBox x:Name="password_txt" HorizontalAlignment="Left" Height="24" Margin="166,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="4" RenderTransformOrigin="0.283,5.391" BorderBrush="#FFB2B2B2" Background="#FFE4E4E4" FontWeight="Bold" FontSize="13.333"/>
+        <TextBox x:Name="email_txt" HorizontalAlignment="Left" Height="23" Margin="166,404,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="4" BorderBrush="#FFB2B2B2" Background="#FFE4E4E4" FontWeight="Bold" FontSize="13.333" RenderTransformOrigin="0.542,0.957"/>
+        <TextBox x:Name="phone_txt" HorizontalAlignment="Left" Height="23" Margin="166,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="4" BorderBrush="#FFB2B2B2" Background="#FFE4E4E4" FontWeight="Bold" FontSize="13.333" PreviewTextInput="phone_txt_PreviewTextInput"/>
+        <Label Content="Company" HorizontalAlignment="Left" Margin="8,479,0,0" VerticalAlignment="Top" Height="28" Width="106" FontWeight="Bold" FontSize="14.667" Grid.Column="4" OpacityMask="#FF080808"/>
+        <TextBox x:Name="company_txt" HorizontalAlignment="Left" Height="23" Margin="166,484,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.189,0.497" Grid.Column="4" BorderBrush="#FFB2B2B2" Background="#FFE4E4E4" FontWeight="Bold" FontSize="13.333"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="469,592,0,0" VerticalAlignment="Top" Width="153" Height="38" Grid.Column="4" RenderTransformOrigin="0,-9.455" Click="update_btn" FontSize="18.667"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="315,592,0,0" VerticalAlignment="Top" Width="149" Grid.Column="4" Height="38" Click="Button_Click_7" RenderTransformOrigin="1.813,4.909" FontSize="18.667"/>
+        <Button x:Name="search_button" Content="Search" HorizontalAlignment="Left" Margin="154,592,0,0" VerticalAlignment="Top" Width="156" Height="38" RenderTransformOrigin="-2.393,-0.304" Grid.Column="4" Click="Button_Click_6" FontSize="18.667"/>
+        <TextBox x:Name="imagetext" HorizontalAlignment="Left" Height="23" Margin="710,494,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Grid.Column="4" Grid.ColumnSpan="2"/>
+        <Label Content="User Image Path" Margin="591,494,10,0" VerticalAlignment="Top" Height="38" RenderTransformOrigin="0.579,0.577" Grid.Column="4" FontWeight="Bold" FontSize="13.333"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="669,268,0,0" VerticalAlignment="Top" Width="170" Click="Browse_Button_Click_1" Grid.Column="4" Height="35" RenderTransformOrigin="0.187,-0.545" Grid.ColumnSpan="2"/>
+        <Button x:Name="AddUser" Content="Add User" HorizontalAlignment="Left" Margin="73,592,0,0" VerticalAlignment="Top" Width="169" Click="adduser_btn" RenderTransformOrigin="0.53,-1.58" Height="38" Grid.Column="3" Grid.ColumnSpan="2" FontSize="18.667"/>
+        <Label Content="User Role" HorizontalAlignment="Left" Margin="10,536,0,0" VerticalAlignment="Top" Height="26" Width="96" RenderTransformOrigin="0.317,0.462" Foreground="Black" FontWeight="Bold" FontSize="14.667" Grid.Column="4"/>
+        <ComboBox Text="User" x:Name="combobox" HorizontalAlignment="Left" Margin="166,541,0,0" VerticalAlignment="Top" Width="186" ItemStringFormat="" SelectionChanged="combobox_SelectionChanged" Grid.Column="4" Height="21" >
+
+            <ComboBoxItem Content="Admin"/>
+            <ComboBoxItem Content="User"/>
+
+        </ComboBox>
+        <Canvas x:Name="image_properties" HorizontalAlignment="Left" Height="117" Margin="523,235,0,0" VerticalAlignment="Top" Width="161" Grid.Column="4">
+            <Button Content="Compress Image" Canvas.Left="33" Canvas.Top="91" Width="98" RenderTransformOrigin="2.077,0.975"/>
+            <Button Content="Crop Image" Canvas.Left="33" Canvas.Top="37" Width="75" Click="crop_btn"/>
+            <Button Content="Resize Image" Canvas.Left="33" Canvas.Top="10" Width="75" Click="resize_button" RenderTransformOrigin="0.733,-0.136"/>
+            <Button Content="Rotate" Canvas.Left="33" Canvas.Top="64" Width="75"  Click="rotate_button"/>
+        </Canvas>
+        <Button Content="Log out" HorizontalAlignment="Left" Margin="83,592,0,0" VerticalAlignment="Top" Width="176" Click="Button_Click_2" Grid.Column="5" Height="38" RenderTransformOrigin="2.36,0.909" FontSize="18.667"/>
+        <Canvas x:Name="resize_canvas" HorizontalAlignment="Left" Height="124" Margin="710,228,0,0" VerticalAlignment="Top" Width="234" Grid.Column="4" Grid.ColumnSpan="2">
+            <Label Content="Height" Canvas.Left="10" Canvas.Top="39"/>
+            <TextBox x:Name="height_text" Height="23" Canvas.Left="56" TextWrapping="Wrap" Canvas.Top="39" Width="142" PreviewTextInput="height_text_PreviewTextInput"/>
+            <Button Content="Apply" Canvas.Left="14" Canvas.Top="70" Width="75" Click="Button_Click_3" RenderTransformOrigin="0.127,0.554"/>
+            <TextBox x:Name="width_text"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Canvas.Left="56" Canvas.Top="11" PreviewTextInput="width_text_PreviewTextInput"/>
+            <Label Content="Width" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-3.293,1.666" Canvas.Left="14" Canvas.Top="13"/>
+            <Button Content="Back" Canvas.Left="110" Canvas.Top="70" Width="75" Click="resize_back_btn"/>
+        </Canvas>
+        <Canvas x:Name="search_canvas" HorizontalAlignment="Left" Height="138" Margin="10,226,0,0" VerticalAlignment="Top" Width="264" RenderTransformOrigin="0.5,0.5" Grid.Column="5">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.562"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.49"/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Label Content="ID" Canvas.Left="20" Canvas.Top="50" RenderTransformOrigin="1.227,2.22"/>
+            <TextBox x:Name="search_text" Height="23" Canvas.Left="64" TextWrapping="Wrap" Canvas.Top="53" Width="156" TextChanged="TextBox_TextChanged" Background="#FFF7F7F7" PreviewTextInput="search_text_PreviewTextInput"/>
+            <Label Content="   Search By ID" Canvas.Left="53" Canvas.Top="10" Width="142" FontWeight="Bold" FontSize="16" RenderTransformOrigin="0.634,0.534"/>
+            <Button x:Name="go_button" Content="Go" Canvas.Left="39" Canvas.Top="92" Width="75" Click="go_button_Click"/>
+            <Button Content="Exit" Canvas.Left="145" Canvas.Top="92" Width="75" Click="Exit_search"/>
+            <Image x:Name="image" Height="100" Canvas.Left="190" Canvas.Top="150" Width="100"/>
+        </Canvas>
+        <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" Height="158" Margin="10,58,0,0" VerticalAlignment="Top" Width="567" Grid.Column="4" Background="#FF7A7A7A" FontWeight="Bold" FontSize="13.333"/>
+        <Canvas x:Name="delete_canvas" HorizontalAlignment="Left" Height="124" Margin="16,239,0,0" VerticalAlignment="Top" Width="234" RenderTransformOrigin="0.5,0.5" Grid.Column="5">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.562"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.49"/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Label Content="ID" Canvas.Left="20" Canvas.Top="50" RenderTransformOrigin="1.227,2.22"/>
+            <TextBox x:Name="delete_text" Height="23" Canvas.Left="64" TextWrapping="Wrap" Canvas.Top="53" Width="156" TextChanged="TextBox_TextChanged" Background="#FFF7F7F7" PreviewTextInput="delete_text_PreviewTextInput"/>
+            <Label Content="Delete By ID" Canvas.Left="53" Canvas.Top="10" Width="142" FontWeight="Bold" FontSize="16" RenderTransformOrigin="0.634,0.534"/>
+            <Button x:Name="delete_button" Content="Delete" Canvas.Left="20" Canvas.Top="92" Width="75" Click="delete_button_Click"/>
+            <Button Content="Exit" Canvas.Left="131" Canvas.Top="92" Width="75" Click="Exit_delete"/>
+        </Canvas>
+        <Label Content="8 characters at least" Grid.Column="4" HorizontalAlignment="Left" Margin="302,356,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,1.385" Width="130" Foreground="#FF0A0A0A" FontWeight="Bold"/>
+        <Label Content="someone@somewhere.com" Grid.Column="4" HorizontalAlignment="Left" Margin="302,399,0,0" VerticalAlignment="Top" Width="170" Foreground="#FF0A0A0A" FontWeight="Bold"/>
+        <Label Content="            WELCOME" Grid.Column="4" HorizontalAlignment="Left" Margin="112,5,0,0" VerticalAlignment="Top" Width="320" FontFamily="Trajan Pro" FontSize="32" Foreground="#FFA0A0A0" FontWeight="Bold"/>
+        <Canvas x:Name="rotate_canvas" Grid.Column="5" HorizontalAlignment="Left" Height="91" Margin="83,362,0,0" VerticalAlignment="Top" Width="234">
+            <Button x:Name="apply_rotate" Content="Apply" Canvas.Left="21" Canvas.Top="52" Width="75" RenderTransformOrigin="0.48,-0.227" Click="Apply_rotate" FontSize="13.333"/>
+            <Label Content="Rotate Degree" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="10" Height="37" FontWeight="Bold"/>
+            <TextBox x:Name="rotate_txt" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Canvas.Left="101" Canvas.Top="13" PreviewTextInput="rotate_txt_PreviewTextInput"/>
+            <Button Content="Back" Canvas.Left="146" Canvas.Top="52" Width="75" Click="rotate_back_btn" RenderTransformOrigin="0.8,-0.182" FontSize="13.333"/>
+        </Canvas>
+        <Button x:Name="admins_btn" Content="Show Admins" Grid.Column="4" HorizontalAlignment="Left" Margin="641,124,0,0" VerticalAlignment="Top" Width="303" Click="admins_btn_Click" Height="29" FontSize="14.667" Grid.ColumnSpan="2"/>
+        <Button x:Name="users_btn" Content="Show Bussiness Users" Grid.Column="4" HorizontalAlignment="Left" Margin="641,165,0,0" VerticalAlignment="Top" Width="303" Click="users_btn_Click" Height="33" FontSize="14.667" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="username_txt" Grid.Column="4" HorizontalAlignment="Left" Height="26" Margin="166,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="#FFB2B2B2" Background="#FFE4E4E4" FontWeight="Bold" FontSize="13.333"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" Width="137" Grid.Column="4" OpacityMask="Black"/>
+        <Button Content="Reset" Grid.Column="4" HorizontalAlignment="Left" Margin="629,592,0,0" VerticalAlignment="Top" Width="162" Height="38" Click="Button_Click_8" FontSize="18.667" Grid.ColumnSpan="2"/>
+        <Canvas x:Name="crop_canvas" Grid.Column="4" HorizontalAlignment="Left" Height="131" Margin="533,347,0,0" VerticalAlignment="Top" Width="336" Grid.ColumnSpan="2">
+            <Label Content="X-axis" Canvas.Left="4" Canvas.Top="10" Width="57" Height="24" FontWeight="Bold"/>
+            <Label Content="Height" Canvas.Left="4" Canvas.Top="55" Width="57" Height="35" FontWeight="Bold"/>
+            <Label Content="Y-axis" Canvas.Left="184" Canvas.Top="10" Height="24" Width="45" FontWeight="Bold"/>
+            <Label Canvas.Left="189" Canvas.Top="57" Height="9" Width="9"/>
+            <Button Content="Apply" Canvas.Left="57" Canvas.Top="95" Width="68" Click="apply_btn" Height="21" FontSize="13.333"/>
+            <Button Canvas.Left="206" Canvas.Top="95" Width="62" Height="21" Content="Cancel" Click="crop_cancel_btn" FontSize="13.333" />
+            <Label Canvas.Left="189" Canvas.Top="49" Height="10" Width="9"/>
+            <TextBox x:Name="X_txt" Height="21" Canvas.Left="57" TextWrapping="Wrap" Canvas.Top="10" Width="104" PreviewTextInput="X_txt_PreviewTextInput"/>
+            <TextBox x:Name="height_txt" Height="21" Canvas.Left="61" TextWrapping="Wrap" Canvas.Top="57" Width="100" PreviewTextInput="height_txt_PreviewTextInput"/>
+            <TextBox x:Name="Y_txt" Height="21" Canvas.Left="229" TextWrapping="Wrap" Canvas.Top="13" Width="93" PreviewTextInput="Y_txt_PreviewTextInput"/>
+            <Label Content="Width" Canvas.Left="177" Canvas.Top="54" Height="24" Width="52" FontWeight="Bold"/>
+            <TextBox x:Name="width_txt" Height="21" Canvas.Left="229" TextWrapping="Wrap" Canvas.Top="54" Width="93" PreviewTextInput="width_txt_PreviewTextInput"/>
+        </Canvas>
+        <Label Content="Enter your first name in letters" Grid.Column="4" HorizontalAlignment="Left" Margin="302,278,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,1.385" Width="185" Foreground="#FF0A0A0A" FontWeight="Bold"/>
+        <Label Content="Enter your last name in letters" Grid.Column="4" HorizontalAlignment="Left" Margin="302,317,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,1.385" Width="185" Foreground="#FF0A0A0A" FontWeight="Bold"/>
+        <Label Content="Enter your phone in numbers only" Grid.Column="4" HorizontalAlignment="Left" Margin="302,440,0,0" VerticalAlignment="Top" Width="204" Foreground="#FF0A0A0A" FontWeight="Bold"/>
+        <Image x:Name="username_image" Grid.Column="5" HorizontalAlignment="Left" Height="123" Margin="131,458,0,0" VerticalAlignment="Top" Width="214"/>
+        <Image x:Name="image1" Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="219,0,0,0" VerticalAlignment="Top" Width="126"/>
+        <Label x:Name="username_label" Content="" Grid.Column="4" HorizontalAlignment="Left" Margin="437,0,0,0" VerticalAlignment="Top" Height="53" Width="237" FontSize="32" FontWeight="Bold" Foreground="#FFBFBFBF"/>
+
+    </Grid>
+</Window>
